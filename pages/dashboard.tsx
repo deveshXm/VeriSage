@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Button } from "@/components/ui/button"
 
 function dashboard() {
   return (
-    <div>dashboard</div>
-  )
+    <div>
+      <Button variant="destructive">Destructive</Button>
+    </div>
+  );
 }
 
-export default dashboard
+export default dashboard;

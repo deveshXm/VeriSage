@@ -17,7 +17,7 @@ function Register() {
   };
   
   return (
-    <section className="relative h-screen bg-black flex flex-col items-center justify-center items-center">
+    <section className="relative h-screen bg-black flex flex-col justify-center items-center">
       <div className="bg-[#161616] w-[30vw] rounded-xl p-10 space-y-10 flex flex-col items-center">
         <div className="w-full">
           <h1 className="text-white">College Name</h1>

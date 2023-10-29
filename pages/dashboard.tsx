@@ -73,15 +73,13 @@ function Dashboard() {
   return (
     <section className="relative h-screen bg-black flex flex-col items-center">
       <div className="flex justify-between px-10 py-7 items-center w-full">
-        <h1 className="text-white">Decentrized</h1>
-        <Button variant="destructive">Disconnect</Button>
       </div>
       <div className="bg-[#161616] w-[60vw] rounded-xl mt-10 p-10">
         <DataTable columns={columns} data={data} />
       </div>
     </section>
-  );
+  )
 }
 
-export default Dashboard;
+export default Dashboard
 

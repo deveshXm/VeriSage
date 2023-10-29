@@ -10,6 +10,7 @@ import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { mainnet, polygon, optimism, arbitrum, base, zora } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
+import Navbar from "@/components/Navbar";
 
 const hedera: Chain = {
   id: 0x128, // You can assign a unique identifier as needed
@@ -24,7 +25,7 @@ const hedera: Chain = {
   },
   rpcUrls: {
     public: {
-      http: ["https://testnet.hedera.com:50211"], // Use the Hedera Testnet RPC endpoint
+      http: [" https://testnet.hashio.io/api"], // Use the Hedera Testnet RPC endpoint
     },
     default: {
       http: ["https://testnet.hedera.com:50211"], // Use the same Hedera Testnet RPC endpoint as the public one
@@ -33,7 +34,7 @@ const hedera: Chain = {
   blockExplorers: {
     default: {
       name: "Hedera Testnet Explorer", // Name of the block explorer
-      url: "https://testnet.dragonglass.me/hedera/transactions", // Use the Hedera Testnet explorer URL
+      url: "https://hashscan.io/testnet/dashboard", // Use the Hedera Testnet explorer URL
     },
   },
   contracts: {
@@ -63,6 +64,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains}>
+        <Navbar />
         <Component {...pageProps} />;
       </RainbowKitProvider>
     </WagmiConfig>

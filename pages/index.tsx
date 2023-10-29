@@ -1,11 +1,13 @@
 // import { Grid, Button } from "@geist-ui/core";
 // import { ArrowRightCircle } from "@geist-ui/icons";
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { GlobalAppContext } from "@/contexts/GlobalAppContext";
 import { connectToMetamask } from "@/services/metamaskServices";
+
+
 
 export default function Hero() {
   // const navigate = useNavigate();
@@ -17,9 +19,14 @@ export default function Hero() {
     if (addresses) {
       // grab the first wallet address
       setMetamaskAccountAddress(addresses[0]);
-      console.log("This is amazing",addresses[0]);
+      // console.log("This is amazing", addresses[0]);
     }
   };
+
+  useEffect(() => {
+    console.log("metamaskAccountAddress has changed:", metamaskAccountAddress);
+    // You can perform actions here when metamaskAccountAddress changes.
+  }, [metamaskAccountAddress]);
 
   const titleRef = useRef<HTMLHeadingElement>(null);
   return (
@@ -36,14 +43,14 @@ export default function Hero() {
       {/* Navabr content */}
       <div className=" py-6 items-center justify-center flex flex-row">
         <div className="text-white w-2/3 text-2xl font-bold">Decenterized </div>
-        <Button
+        {/* <Button
           onClick={retrieveWalletAddress}
           className="bg-blue-400 hover:bg-white hover:text-black px-8 text-lg rounded-2xl"
         >
           {metamaskAccountAddress === ""
-            ? "Connect to MetaMask"
+            ? "Connect"
             : `Connected to: ${metamaskAccountAddress.substring(0, 8)}...`}{" "}
-        </Button>
+        </Button> */}
         <ConnectButton />
       </div>
 

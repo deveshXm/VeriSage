@@ -15,6 +15,7 @@ function Register() {
 
     console.log("value is:", event.target.value);
   };
+  
   return (
     <section className="relative h-screen bg-black flex flex-col items-center justify-center items-center">
       <div className="bg-[#161616] w-[30vw] rounded-xl p-10 space-y-10 flex flex-col items-center">
@@ -42,4 +43,6 @@ function Register() {
   );
 }
 
+
 export default Register;
+

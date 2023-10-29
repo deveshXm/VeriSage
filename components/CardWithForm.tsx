@@ -24,7 +24,8 @@ export default function CardWithForm() {
   const [contentId, setContentId] = React.useState<string>();
   const [qrCodeText, setQrCodeText] = React.useState<string>();
   const [uploading, setUploading] = React.useState<boolean>(false);
-
+  const apiToken = process.env.NEXT_PUBLIC_API_TOKEN;
+  
   function handleChange(event: { target: { files: string | any[] } }) {
     if (!event.target.files) {
       console.log("No file selected");
@@ -49,8 +50,7 @@ export default function CardWithForm() {
       const response = await fetch("https://api.nft.storage/upload", {
         method: "POST",
         headers: {
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDBhZmVjM0FlMzZkMTlhNjFBZGRhMGFCMzVEMjZjOTdGMDZjODA3RjQiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY5NDA4MTk2MjAyMywibmFtZSI6IkhBQ0tBVEhPTiJ9.2PCTZQBPIg4y2dtxGRdpNO6Akp2UAXumJIdEOKpx9NQ", // Replace with your API key
+          Authorization: `Bearer ${apiToken}`,
         },
         body: formData,
       });
@@ -158,7 +158,7 @@ export default function CardWithForm() {
             <div>File is Being Uploaded .......</div>
           ) : (
             qrCodeText && (
-              <div >
+              <div>
                 <p>The uploaded QR code is here</p>
                 <QRCode
                   size={256}

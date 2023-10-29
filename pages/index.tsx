@@ -6,8 +6,7 @@ import Link from "next/link";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { GlobalAppContext } from "@/contexts/GlobalAppContext";
 import { connectToMetamask } from "@/services/metamaskServices";
-
-
+import hero from "../public/hero.png";
 
 export default function Hero() {
   // const navigate = useNavigate();
@@ -34,14 +33,13 @@ export default function Hero() {
       className="relative h-screen"
       style={{
         background:
-          "url(https://github.com/tailwind/kite/assets/48355572/4bfa0c89-00a2-4322-9cf9-8fd911850aa0)",
+          // "url(https://github.com/tailwind/kite/assets/48355572/4bfa0c89-00a2-4322-9cf9-8fd911850aa0)",
+          `url(${hero.src})`,
         backgroundRepeat: "repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
     >
-     
-
       {/* Illustration behind hero content */}
       <div
         className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1"
@@ -110,7 +108,7 @@ export default function Hero() {
                       } as React.CSSProperties
                     }
                   >
-                    Back
+                    Secure
                   </span>
 
                   <span
@@ -126,7 +124,7 @@ export default function Hero() {
                       } as React.CSSProperties
                     }
                   >
-                    Best
+                    &
                   </span>
 
                   <span
@@ -142,7 +140,7 @@ export default function Hero() {
                       } as React.CSSProperties
                     }
                   >
-                    Projects
+                    Verified
                   </span>
                 </div>
               </div>
@@ -153,9 +151,8 @@ export default function Hero() {
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
-                Empower Dreams, Securely Funded: Fund the best Projects on{" "}
-                <b>NEAR</b> Protocol <br /> Where Crowdfunding Shakes hands with
-                DAO for Social Good!
+                Verisage: Navigating the Digital Frontier with Precision,
+                Insight, and Confidence{" "}
               </p>
               <div className=" flex flex-wrap space-x-4 max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
                 <div>
@@ -166,9 +163,9 @@ export default function Hero() {
                   </Link>
                 </div>
                 <div>
-                  <Link href="/register">
+                  <Link href="/upload">
                     <Button variant="secondary" className=" px-8 text-lg">
-                      Register
+                      Upload
                     </Button>
                   </Link>
                 </div>

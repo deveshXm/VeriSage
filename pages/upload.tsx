@@ -15,9 +15,9 @@ function upload() {
     <div className="">
       {/* <h1>Upload the files here</h1> */}
       <div className="flex flex-row p-10">
-        <div className=" w-96 h-screen flex">
+        {/* <div className=" w-96 h-screen flex">
           <Sidebar />
-        </div>
+        </div> */}
         <div className="flex  w-full justify-center">
           <CardWithForm />
         </div>

@@ -40,19 +40,7 @@ export default function Hero() {
         backgroundSize: "cover",
       }}
     >
-      {/* Navabr content */}
-      <div className=" py-6 items-center justify-center flex flex-row">
-        <div className="text-white w-2/3 text-2xl font-bold">Decenterized </div>
-        {/* <Button
-          onClick={retrieveWalletAddress}
-          className="bg-blue-400 hover:bg-white hover:text-black px-8 text-lg rounded-2xl"
-        >
-          {metamaskAccountAddress === ""
-            ? "Connect"
-            : `Connected to: ${metamaskAccountAddress.substring(0, 8)}...`}{" "}
-        </Button> */}
-        <ConnectButton />
-      </div>
+     
 
       {/* Illustration behind hero content */}
       <div
@@ -104,7 +92,7 @@ export default function Hero() {
                   }}
                 >
                   <center>
-                    <mark>NearSocialBoost</mark>
+                    <mark>VeriSage</mark>
                   </center>
                 </span>
 

@@ -1,4 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# VeriSage
+![Project Image/GIF](https://raw.githubusercontent.com/Horlarmmy/Web3App/5f0ddd60c87c901e7795ffd931b5aec95c8256bd/public/VeriSage%20Header.png)
+
+VeriSage is a  platform that simplifies the process of requesting and verifying certificates. It offers a secure and transparent way to manage and authenticate your achievements.
+
+
+## Features
+
+- **Certificate Requests**: Users can request certificates from educational institutions, certification authorities, or any organization that issues certificates.
+
+- **Verification**: Verify the authenticity of certificates by checking them against the blockchain, ensuring trust and accuracy.
+
+- **Blockchain Technology**: Built on [Blockchain Platform Name], providing an immutable and transparent ledger for secure record-keeping.
+
+- **Decentralized**: No central authority controls the data, ensuring data integrity and user privacy.
+
+- **User-Friendly Interface**: Intuitive design for easy navigation and certificate management.
+
+- **Smart Contracts**: Utilizes smart contracts for requesting, issuing, and verifying certificates.
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) - JavaScript runtime environment
+- [Truffle](https://www.trufflesuite.com/truffle) - Development framework for Ethereum
+- [Ganache](https://www.trufflesuite.com/ganache) - Local blockchain for testing
+- [Metamask](https://metamask.io/) - Ethereum wallet and gateway to blockchain apps
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/verisage.git
+   cd verisage
+
 
 ## Getting Started
 
